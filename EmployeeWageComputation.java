@@ -9,15 +9,14 @@ public class EmployeeWageComputation {
     static int WORKING_DAYS_PER_MONTH = 20;
     static int TOTAL_WORKING_HOURS = 100;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wage Computation Program");
+    public static void toCalculateMonthlyWage() {
         int monthlyWage = 0;
         int dailyEmployeeWage;
         int workingDays = 0;
         int workingHours = 0;
         int empHours;
 
-        while (workingHours <= TOTAL_WORKING_HOURS && workingDays < WORKING_DAYS_PER_MONTH) {
+        while (workingHours != TOTAL_WORKING_HOURS && workingDays < WORKING_DAYS_PER_MONTH) {
             workingDays++;
             int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 
@@ -52,6 +51,10 @@ public class EmployeeWageComputation {
         }
         System.out.println("total working hours in a Month = " + workingHours);
         System.out.println("==================================================================================");
-        System.out.println("Total Emp Wage = " + monthlyWage);
+        System.out.println("TOTAL MONTHLY WAGE OF EMPLOYEE = " + monthlyWage);
+    }
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Computation Program");
+        toCalculateMonthlyWage();
     }
 }
